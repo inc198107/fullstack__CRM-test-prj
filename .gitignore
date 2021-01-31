@@ -3,7 +3,7 @@
 node_modules/
 
 # app keys
- config/
+ config/keys.js
 
 
 # IDE - VSCode
