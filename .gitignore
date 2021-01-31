@@ -2,6 +2,9 @@
 # dependencies
 node_modules/
 
+# app keys
+ config/
+
 
 # IDE - VSCode
 .vscode/*
