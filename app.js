@@ -8,7 +8,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 mongoose
-  .connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
+  .connect(keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
   .then(() => {
     console.log("DB connected");
   })
