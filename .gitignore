@@ -3,7 +3,7 @@
 node_modules/
 
 # app keys
- config/keys.js
+/config/keys.js
 
 
 # IDE - VSCode
@@ -18,3 +18,12 @@ node_modules/
 npm-debug.log
 testem.log
 /typings
+
+# temps
+/WORKFLOW/
+/TEMP/
+
+# TypeScript build and local environment
+/dist/
+.env*
+!.env.example
