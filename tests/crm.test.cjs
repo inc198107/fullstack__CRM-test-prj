@@ -92,7 +92,7 @@ test("HTTP auth adapter preserves response statuses and token envelope", async (
 
   const loginResponse = responseSpy();
   await controller.login({ body: { email: "user@example.test", password: "password" } }, loginResponse);
-  assert.deepEqual(loginResponse.body, { token: "Bearer signed-token" });
+  assert.deepEqual(loginResponse.body, { accessToken: "Bearer signed-token" });
   assert.equal(loginResponse.statusCode, 200);
 
   const wrongResponse = responseSpy();

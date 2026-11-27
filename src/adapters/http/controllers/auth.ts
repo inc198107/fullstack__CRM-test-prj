@@ -9,7 +9,7 @@ type AuthBody = {
   password: string;
 };
 
-type LoginResponse = { token: string } | { message: string };
+type LoginResponse = { accessToken: string } | { message: string };
 type RegisterResponse = { new_user: RegisteredUser } | { message: string };
 type LogoutResponse = { message: string };
 type RegisteredUser = { _id: string; email: string; password: string };
@@ -38,7 +38,7 @@ export function createAuthController({ login, register }: AuthControllerDependen
       const result = await login.execute(req.body.email, req.body.password);
       switch (result.kind) {
         case "authenticated":
-          res.status(200).json({ token: `Bearer ${result.token}` });
+          res.status(200).json({ accessToken: `Bearer ${result.token}` });
           return;
         case "user-not-found":
           res.status(404).json({ message: "User not found" });
